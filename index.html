@@ -5,8 +5,10 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./assets/questions.js"></script>
 
-  <script src="./questions/questions.js"></script>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -35,20 +37,11 @@
     </div>
   </nav>
 
-  <div id="startButton" class="button">
-    <a href="./questions/questions.html"><button type="button" class="btn btn-outline-danger">Get Matched with a
-        Language!</button></a>
-    <style>
-      .btn-outline-danger {
-        margin: 300px 800px;
-        font-size: 30px;
-      }
-    </style>
-  </div>
-
-  
-
-
+  <button id="start">Get Matched with a Language!</button>
+       <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
 
 
 
@@ -70,13 +63,7 @@
     
   <script src= "./assets/questions.js"></script>
   <script src= "./assets/results.js"></script> 
-
-
-
-</body>
-
-</html>
-
+  <script src="./assets/logic.js"></script>
 
 
 
