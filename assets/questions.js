@@ -29,6 +29,12 @@ var questions = [
         choices: [ "More uncommon", "A good in-between", "More universal"]
     }
 ];
+questions.forEach(myFunction);
+
+function myFunction(item,index) { 
+    document.getElementById("results")
+}
+
 console.log(questions);
 
 // on click button function 
