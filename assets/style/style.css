@@ -1,0 +1,23 @@
+#home {
+    width: 46px;
+    height: 44px;
+    background: url(img_navsprites.gif) 0 0;
+  }
+  
+  #next {
+    width: 43px;
+    height: 44px;
+    background: url(img_navsprites.gif) -91px 0;
+  }
+
+  
+/* How to make rounded images */
+  img {
+    border-radius: 8px;
+  }
+
+  #placement{
+    position:absolute;
+    top:10%;
+    left:20%;
+}
