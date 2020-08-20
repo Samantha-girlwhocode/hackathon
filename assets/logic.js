@@ -11,7 +11,9 @@ function startQuiz() {
 function getQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
     var titleEl = document.getElementById("question-title");
+
     titleEl.textContent = currentQuestion.title;
+
     choicesE1.innerHTML = "";
     // loop over choices
   currentQuestion.choices.forEach(function(choice, i) {
@@ -26,27 +28,35 @@ function getQuestion() {
     choicesE1.appendChild(choiceNode);
 });
 }
+
+
+languageDisplay()
+
 function questionClick() {
     // move to next question
     currentQuestionIndex++;
   
     // check if we've run out of questions
     if (currentQuestionIndex === questions.length) {
+
       quizEnd();
+
+      function quizEnd() {
+    var resultsPage = document.getElementById("results");
+    resultsPage.removeAttribute("class");
+  }
+
     } else {
       getQuestion();
     }
   }
+
   function quizEnd() {
     var resultsPage = document.getElementById("results");
     resultsPage.removeAttribute("class");
   }
 startBtn.onclick = startQuiz;
 console.log(questions)
-
-
-
-
 
 
 

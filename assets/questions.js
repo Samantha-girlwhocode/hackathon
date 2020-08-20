@@ -1,4 +1,12 @@
 var userPoints = 0
+
+var englishCounter = 0
+var spanishCounter = 0
+var frenchCounter = 0
+var italianCounter = 0
+var mandarinCounter = 0
+var japaneseCounter = 0
+
 var questions = [
     {
         title: "What's your native language?",
@@ -14,14 +22,27 @@ var questions = [
     },
     {
         title: "Which of these do you prefer in your language?",
-        choices: ["Alphabet", "Syllabic Alphabets", "Semanto-phonetic writing systems"]
+        choices: ["Latin Alphabet", "Syllabic Alphabets", "Semanto-phonetic writing systems"]
     },
     {
         title: "Do you prefer a language that is more universal or more uncommon?",
         choices: [ "More uncommon", "A good in-between", "More universal"]
     }
 ];
+questions.forEach(myFunction);
+
+function myFunction(item,index) { 
+    document.getElementById("results")
+}
+
 console.log(questions);
+
+// on click button function 
+
+//whatever you click becomes 
+
+
+
 if (questions[0].choices === [0]) {
     userPoints ++
 } else if (questions[0].choices === [1]) {
