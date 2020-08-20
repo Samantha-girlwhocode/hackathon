@@ -26,6 +26,7 @@ function getQuestion() {
     choicesE1.appendChild(choiceNode);
 });
 }
+languageDisplay()
 function questionClick() {
     // move to next question
     currentQuestionIndex++;
