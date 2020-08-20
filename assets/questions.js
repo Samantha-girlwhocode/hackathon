@@ -55,3 +55,4 @@ if (questions[0].choices === [0]) {
     userPoints + 5 
 }
 console.log(userPoints)
+
