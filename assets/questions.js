@@ -27,7 +27,12 @@ var questions = [
     {
         title: "Do you prefer a language that is more universal or more uncommon?",
         choices: [ "More uncommon", "A good in-between", "More universal"]
+    },
+    {
+        title: "Your Score:",
+        choices: []
     }
+
 ];
 questions.forEach(myFunction);
 
@@ -43,15 +48,15 @@ console.log(questions);
 
 
 
-if (questions[0].choices === [0]) {
-    userPoints ++
-} else if (questions[0].choices === [1]) {
-    userPoints + 2 
-} else if (questions[0].choices === [2]) {
-    userPoints + 3 
-} else if (questions[0].choices === [3]) {
-    userPoints + 4 
-} else if (questions[0].choices === [4]) {
-    userPoints + 5 
-}
-console.log(userPoints)
+// if (questions[0].choices === [0]) {
+//     userPoints ++
+// } else if (questions[0].choices === [1]) {
+//     userPoints + 2 
+// } else if (questions[0].choices === [2]) {
+//     userPoints + 3 
+// } else if (questions[0].choices === [3]) {
+//     userPoints + 4 
+// } else if (questions[0].choices === [4]) {
+//     userPoints + 5 
+// }
+console.log(englishCounter)

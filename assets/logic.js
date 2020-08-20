@@ -11,8 +11,10 @@ function startQuiz() {
 function getQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
     var titleEl = document.getElementById("question-title");
-    titleEl.textContent = questions[currentQuestionIndex].title;
+     
     choicesE1.innerHTML = "";
+
+   
     // loop over choices
   currentQuestion.choices.forEach(function(choice, i) {
     // create new button for each choice
@@ -24,13 +26,17 @@ function getQuestion() {
     choiceNode.onclick = questionClick;
     // display on the page
     choicesE1.appendChild(choiceNode);
+
+    // addPoints();
 });
+titleEl.textContent = currentQuestion.title;
 }
-languageDisplay()
+
 function questionClick() {
     // move to next question
     currentQuestionIndex++;
-  
+  languageDisplay();
+
     // check if we've run out of questions
     if (currentQuestionIndex === questions.length) {
       function quizEnd() {
@@ -42,5 +48,10 @@ function questionClick() {
     }
   }
   
+// document.getElementById("button").onkeyup = function addPoints() {
+
+// alert ("hi")
+
+// };
 startBtn.onclick = startQuiz;
 console.log(questions)
