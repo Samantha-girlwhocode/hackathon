@@ -1,50 +1,119 @@
 
-a.button4{
-     display:inline-block;
-     padding:0.3em 1.2em;
-     margin:0 0.1em 0.1em 0;
-     border:0.16em solid rgba(255,255,255,0);
-     border-radius:2em;
-     box-sizing: border-box;
-     text-decoration:none;
-     font-family:'Roboto',sans-serif;
-     font-weight:300;
-     color:#FFFFFF;
-     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-     text-align:center;
-     transition: all 0.2s;
-    }
-    a.button4:hover{
-     border-color: rgba(255,255,255,1);
-    }
-    @media all and (max-width:30em){
-     a.button4{
-      display:block;
-      margin:0.2em auto;
-     }
+/*.button{
+   display:inline-block;
+   padding:0.3em 1.2em;
+   margin:0 0.1em 0.1em 0;
+   border:0.16em solid rgba(255,255,255,0);
+   border-radius:2em;
+   box-sizing: border-box;
+   text-decoration:none;
+   font-family:'Roboto',sans-serif;
+   font-weight:300;
+   color:#FFFFFF;
+   text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+   text-align:center;
+   transition: all 0.2s;
+  }
+  a.button4:hover{
+   border-color: rgba(255,255,255,1);
+  }
+  @media all and (max-width:30em){
+   .button{
+    display:block;
+    margin:0.2em auto;
+   }
+}*/
+
+
+
+/*
+~ forgot what this was supposed to be 
+
+#home {
+    width: 46px;
+    height: 44px;
+    background: url(img_navsprites.gif) 0 0;
   }
   
+  #next {
+    width: 43px;
+    height: 44px;
+    background: url(img_navsprites.gif) -91px 0;
+  }
+
+  */
+
+  img {
+    border-radius: 8px;
+  }
+
+  .button {
+    background-color: red;
+  }
+
+
+
+  .container {
+    position: absolute;
+    top: 10%;
+  }
+  .button {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #eeeeee;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #153f00;
+    padding: 15px 50px;
+    margin: 0 auto;
+  }
+  .button span {
+    position: relative;
+    z-index: 1;
+  }
+  .button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 470%;
+    width: 140%;
+    background: #52b71f;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+    transform: translateX(-100%) translateY(-25%) rotate(45deg);
+  }
+  .button:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+
   
-  
-  /*
-  ~ forgot what this was supposed to be 
-  
-  #home {
-      width: 46px;
-      height: 44px;
-      background: url(img_navsprites.gif) 0 0;
-    }
-    
-    #next {
-      width: 43px;
-      height: 44px;
-      background: url(img_navsprites.gif) -91px 0;
-    }
-  
-    */
-  
-    img {
-      border-radius: 8px;
-    }
-  
+
+  body {
+    font-family: 'Josefin Sans';
+    font-size: 16px
+    color: #000;
+}
+
+.quiz-container {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px white;
+  padding: 3rem;
+  text-shadow: 0 1px #00000010;
+  width: 60%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(360deg, transparent, #ffffff);
+
+}
+
     

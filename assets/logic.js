@@ -30,6 +30,7 @@ function getQuestion() {
     // addPoints();
 });
 titleEl.textContent = currentQuestion.title;
+
 }
 
 function questionClick() {
@@ -48,10 +49,6 @@ function questionClick() {
     }
   }
   
-// document.getElementById("button").onkeyup = function addPoints() {
 
-// alert ("hi")
-
-// };
-startBtn.onclick = startQuiz;
+//startBtn.onclick = startQuiz;
 console.log(questions)

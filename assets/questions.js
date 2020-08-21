@@ -29,11 +29,13 @@ var questions = [
         choices: [ "More uncommon", "A good in-between", "More universal"]
     },
     {
-        title: "Your Score:",
+        title: "Your Score: 15. You get Mandarin! Take a look at our resources.",
         choices: []
     }
 
 ];
+
+
 questions.forEach(myFunction);
 
 function myFunction(item,index) { 

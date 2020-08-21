@@ -5,14 +5,13 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./assets/questions.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
-      $("#start").click(function () {
-        $("#start").hide();
+      $("#button").click(function () {
+        $("#button").hide();
       });
     });
 
@@ -24,43 +23,62 @@
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <title>Language thingy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/style.css">
+
 </head>
 
 <body>
   <!-- use bootstrap to create a nav bar-->
   <!-- should include 'about us' page-->
-<div class="navBar">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Language Tinder</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="about.html">About Us <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="results.html">Results</a>
-        </li>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
+  <div class="navBar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
 
-  <button id="start">Get Matched with a Language!</button>
-       <div id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
+
+      <a class="navbar-brand" href="index.html">Language Tinder</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">About Us <span class="sr-only">(current)</span></a>
+            
+
+
+          </li>
+
+          </li>
+        </ul>
       </div>
+    </nav>
+  </div>
 
 
 
+  <div class="quiz-container">
+    <div id="questions">
+      <h2 id="question-title"></h2>
+      <div id="choices" class="choices"></div>
+    </div>
+
+    <button id="button" onclick="startQuiz()" class="btn btn-danger">Take our quiz to get matched with a language
+      perfect for you!</button>
 
 
+  </div>
+
+  <style>
+      .btn-danger {
+      font-size: 30px;
+      margin: 0px 10px 10px 10px;
+      padding: 30px;
+    }
+  </style>
+  </div>
 
 
   <!-- Optional JavaScript -->
@@ -74,16 +92,263 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Tahoma;
+      padding: 10px;
+      background: #f1f1f1;
+    }
+
+    h1,
+    .navbar-brand,
+    .navbar-nav a {
+      font-family: 'Shrikhand', serif;
+    }
+
+    .header h1 {
+      font-size: 50px;
+    }
+
+
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 75%;
+    }
+
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      background-color: #f1f1f1;
+      padding-left: 20px;
+    }
+
+    /* Fake image */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Add a card effect for articles */
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+      margin-top: 20px;
+    }
+
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+
+      .leftcolumn,
+      .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+
+
+    }
+
+    nav {
+      position: fixed;
+      z-index: 2;
+    }
+  </style>
+  <p>
+
+  </p>
+  <p>
+
+  </p>
+  <div class="header">
+    <h1>Resources</h1>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     
-  <script src= "./assets/questions.js"></script>
-  <script src= "./assets/results.js"></script> 
+    <p>Below you will find a plethora of completely free resources to help you learn languages!</p>
+  </div>
+
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>Language Resources</h2>
+        <h5>Our favorite resources for language learning can be found below, our absolute favorite beginners Spanish story can be found <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEFZIUluZc&#x2F;view?utm_content=DAEFZIUluZc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link">here</a>
+          
+          
+          
+          <a href="<div
+ 
+ 
+></div>
+<script async src="https:&#x2F;&#x2F;sdk.canva.com&#x2F;v1&#x2F;embed.js"></script>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEFZIUluZc&#x2F;view?utm_content=DAEFZIUluZc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a></a> </h5>
+
+        <div class="row">
+          
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://image-aws-us-west-2.vsco.co/6f3a3b/115865135/5df52c7920ec3a0b36a06c87/1136x1391/vsco5df52c7c56135.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Resources to learn Spanish</h5>
+              <p class="card-text">Click the button below to find good resources!</p>
+              <a href="https://www.fluentu.com/blog/educator-spanish/spanish-teaching-resources/" class="btn btn-primary">Go there!</a>
+            </div>
+          </div>
+          
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://66.media.tumblr.com/72f5c2fc5456e581d06ac946cddac46f/tumblr_oixghgTjOt1w1fd4xo1_400.jpg" width="300" height="300" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Resources to learn Manadarin Chinese</h5>
+              <p class="card-text">Click the button below to find good resources!</p>
+              <a href="https://www.chineseboost.com/blog/10-best-free-resources-learn-chinese/" class="btn btn-primary">Go there!</a>
+            </div>
+          </div>
+          
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://bakingamoment.com/wp-content/uploads/2019/01/IMG_2536-best-french-baguette-recipe.jpg" width="300" height="300" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Resources to learn French</h5>
+              <p class="card-text">Click the button below to find good resources!</p>
+              <a href="https://daringtolivefully.com/resources-for-learning-french" class="btn btn-primary">Go there!</a>
+            </div>
+          </div>
+          
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQMaCYaYRWoW8Zu0ghLZGCX0c6kQKSvYjH9uw&usqp=CAU" width="300" height="300" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Places That Speak Spanish</h5>
+              <p class="card-text">The #4 Most Spoken Language in the World!</p>
+              <a href="https://www.babbel.com/en/magazine/how-many-people-speak-spanish-and-where-is-it-spoken" class="btn btn-primary">Go there!</a>
+            </div>
+          </div>
+          
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://mk0nationaltodayijln.kinstacdn.com/wp-content/uploads/2019/02/chinese-new-year-640x514.jpg" width="300" height="300" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Places That Speak Mandarin Chinese</h5>
+              <p class="card-text">The #2 Most Spoken Language in the World!</p>
+              <a href="https://cudoo.com/blog/where-is-chinese-mandarin-spoken/" class="btn btn-primary">Go there!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://www.dhresource.com/0x0/f2/albu/g5/M00/9C/69/rBVaJFlt2AqAYb_9AANDTL-dnLA396.jpg" width="300" height="300" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Places That Speak French</h5>
+              <p class="card-text">The #15 Most Spoken Language in the World!</p>
+              <a href="https://www.babbel.com/en/magazine/how-many-people-speak-french-and-where-is-french-spoken" class="btn btn-primary">Go there!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://is1-ssl.mzstatic.com/image/thumb/Purple124/v4/1d/d2/ac/1dd2ac12-b1f7-7e50-faa0-b5ae7f1e81ee/AppIcon-0-0-1x_U007emarketing-0-0-0-4-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/320x0w.png" width="300" height="300" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Reasons to Learn More Spanish</h5>
+              <p class="card-text">Still not convinced? Here's some more reasons!</p>
+              <a href="https://www.closeteachers.com/why-study-spanish.php" class="btn btn-primary">Go there!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Guanhua_swapped.svg" width="300" height="300" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Reasons to Learn More Mandarin Chinese</h5>
+              <p class="card-text">Still not convinced? Here's some more reasons!</p>
+              <a href="https://accent.gg/10-reasons-why-you-should-learn-mandarin/" class="btn btn-primary">Go there!</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS668iYATRGHudYDK6Kwja7Oq222GX8qvgkBg&usqp=CAU" width="300" height="300" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Reasons to Learn More French</h5>
+              <p class="card-text">Still not convinced? Here's some more reasons!</p>
+              <a href="https://www.diplomatie.gouv.fr/en/french-foreign-policy/francophony-and-the-french-language/learning-and-teaching-french/article/10-good-reasons-for-learning" class="btn btn-primary">Go there!</a>
+            </div>
+          </div>
+
+
+
+
+          </div>
+
+    
+          <p>Good luck learning!</p>
+        </div>
+        <div class="card">
+          <h2>What's to come in the future!</h2>
+          <h5>We hope to add more features and continue to improve the functionality, we hope to find all bugs we may have and fix them :))</h5>
+          <div class="fakeimg" style="height:200px;">Image</div>
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco.</p>
+        </div>
+      </div>
+      <div class="rightcolumn">
+        <div class="card">
+          <h2 style="font-family: Arial, Helvetica, sans-serif;">About Us</h2>
+          <div class="aboutus"><img src="https://cdn0.iconfinder.com/data/icons/flatico/512/monitor_code__editor-512.png" width= "250px"></div>
+          <p style="font-family: 'Courier New', Courier, monospace;"> <br>
+            <strong>We are three teens who love to code! <Br>
+            But most importantly, love to keep up <br>
+            with our languages.</strong> </p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.vox-cdn.com/thumbor/jnpCYDpjatIv_X6ds_o8AMtn_sY=/0x0:1000x1000/1200x675/filters:focal(420x420:580x580):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/62671603/duolingo_2.1544716157.gif" width="300px" height="200px">
+          <p style="font-size: 20px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center;">Have you been keeping up with your Duolingo? Be honest....</p>
+        </div>
+
+        
+        <div class="card">
+          <h5><Strong>Why we made Language Tinder!</Strong></h5>
+          <img src="https://i.pinimg.com/originals/f4/16/f9/f416f944a4e0f6bf63beff30b9e66246.png" width="200px" height="100px"
+            height="150px">
+          <p>Many people struggle to decide what language to learn, <Br>
+            with the help of Language Tinder, the struggle is gone! <br>
+            Learning more languages helps in building connections <br>
+            and networks from all sorts of backgrounds!</p>
+        </div>
+      </div>
+    </div>
+
+  <div class="footer">
+    
+  </div>
+
+
+
+
+
+  <!-- These are the code for connecting the files -->
+  <script src="./assets/questions.js"></script>
+  <script src="./assets/results.js"></script>
   <script src="./assets/logic.js"></script>
 
-
-
-
-
-</script>
 </body>
 
 </html>
